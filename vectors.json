@@ -1,0 +1,218 @@
+{
+  "format": "trace-vectors/v1",
+  "note": "Trace 외부 게시 계산식의 기준값. DB(0010), 앱(lib/anchor.ts), verify.mjs 가 모두 이 값을 내야 한다.",
+  "empty_root": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sets": [
+    {
+      "name": "set1",
+      "note": "잎 1개: 요약값은 잎 그대로",
+      "records": [
+        {
+          "content": "오늘은 초안을 버리고 처음부터 다시 쓰기로 했다.",
+          "seq": 1,
+          "created_at": "2026-11-22T15:00:00.000000Z",
+          "input_method": "typed",
+          "content_hash": "42e5466dfed56b32305c48d01b086af7208e7b451d3aa2a0b883f90f997f7909",
+          "entry_hash": "097c35603b6c0a3b4068b348f82b7d19f7ea333a167b8ad71576108c0f9c3701",
+          "salt": "576ab50729a9bd9f6fd2ba66ef2d6b3ac4037eb36bfd833f6935d683cace3ef3"
+        }
+      ],
+      "leaves": [
+        "b90413f224cb5e391eb6b9ccb05cc3b43165c37693092194f11f4377fe8bb8dc"
+      ],
+      "root": "b90413f224cb5e391eb6b9ccb05cc3b43165c37693092194f11f4377fe8bb8dc",
+      "paths": [
+        []
+      ]
+    },
+    {
+      "name": "set2",
+      "note": "잎 2개",
+      "records": [
+        {
+          "content": "면접 과제는 직접 손으로 풀기로 결정",
+          "seq": 7,
+          "created_at": "2026-11-23T01:02:03.000004Z",
+          "input_method": "typed",
+          "content_hash": "69e4cb9197274e67329754fa843fc33aa8b33054a8d2641368a4ea9555fb6355",
+          "entry_hash": "8f50e3a88e85701c3262aaf52dfdee4b84b594243c1ce80376eefee02a971e3a",
+          "salt": "8547db06654bbb20f11d2c0e3bb6539bdd94b50f4ae625cebfe2fefdee709a59"
+        },
+        {
+          "content": "Line one\nline two — 줄바꿈과 “따옴표”, 이모지 🙂 포함",
+          "seq": 8,
+          "created_at": "2026-11-23T14:59:59.999999Z",
+          "input_method": "pasted",
+          "content_hash": "ccff9f14508d9936f9b9b4911056a5c98c015e320d4a735a037c3e29e916813b",
+          "entry_hash": "59f791d2c00b95b72f917cbc9f4632410d510f07bafe39a3dd740a9bd92fe2f8",
+          "salt": "4731f8507d1e56f9bcb62e7cd131aead21706b9b5c8051b3463253f6e3f7ff4b"
+        }
+      ],
+      "leaves": [
+        "e67ffd8df0932c7ef653e8bb8a0ff12b54add705534b0a4a827fd37418be9a06",
+        "52f82fb22ff9977c4a10656080a39353a9bb95e2f1038095a778fc885aff3b50"
+      ],
+      "root": "ce962f2c280663bc8eb77932c3a38ca4bb98f8e8147f0eb2fbc2b22296dd3869",
+      "paths": [
+        [
+          {
+            "side": "L",
+            "hash": "52f82fb22ff9977c4a10656080a39353a9bb95e2f1038095a778fc885aff3b50"
+          }
+        ],
+        [
+          {
+            "side": "R",
+            "hash": "e67ffd8df0932c7ef653e8bb8a0ff12b54add705534b0a4a827fd37418be9a06"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "set3",
+      "note": "잎 5개: 짝이 없는 값이 두 번 그대로 올라간다",
+      "records": [
+        {
+          "content": "가",
+          "seq": 1,
+          "created_at": "2026-11-24T00:00:00.000001Z",
+          "input_method": "typed",
+          "content_hash": "64ee5293d31bc58b72d76ae9a86a902e90442428e29f24f4ecb257ba841cdd36",
+          "entry_hash": "dd3a358a45e5abcee3d197403396a1e4d9c4869acbef5426b8ab708e2b4a5e1c",
+          "salt": "38158030545f103a3f0b0a38e11e1cb9fc16e92ab4fa428830799b75fecb9d63"
+        },
+        {
+          "content": "나",
+          "seq": 2,
+          "created_at": "2026-11-24T03:30:00.120000Z",
+          "input_method": "voice",
+          "content_hash": "1098bbe54520ab2a367cb44888f829c7bb843cf525e6721b99f022c9953abd4d",
+          "entry_hash": "9482c65196fec98ccde989ac7e6ddeabf97386da35f3929d42618521d4995fb0",
+          "salt": "b07a63bf43f2c751f7824066ab1ca142da5d4f3662cf6ada879a5fc50d462a97"
+        },
+        {
+          "content": "다",
+          "seq": 15,
+          "created_at": "2026-11-24T08:15:45.000300Z",
+          "input_method": "ai_chat",
+          "content_hash": "822b7db6f6886f5724136aec4851d66efcc46d0125b5d4b406caabb9fc630a38",
+          "entry_hash": "e67a0e9ca48754d7438037fc12a9e79462336349d2970190a2016931cf10273d",
+          "salt": "a54052401d5656dc2700906203c49df37b16e09f9afcd22be251d7c267bd5eff"
+        },
+        {
+          "content": "라",
+          "seq": 123456789,
+          "created_at": "2026-11-24T11:11:11.111111Z",
+          "input_method": "ai_assisted",
+          "content_hash": "d2121a871ca59e3b9a3a17a2ec0f0aa04fe0fefe224720a02377f90a7c85ce49",
+          "entry_hash": "a5bef661c862bab045d17df956f85dd5ec40ccea546c7d1deb79b76126172ffb",
+          "salt": "c361254ca1ad3fd634a03316131b6b1945cf79f3dc1f6d32f872e8d356af655b"
+        },
+        {
+          "content": "[과정 묶음] 보고서\n결과물 지문: 없음",
+          "seq": 16,
+          "created_at": "2026-11-24T14:00:00.500000Z",
+          "input_method": "bundle",
+          "content_hash": "d85245c099d150be4183dd7d1e370c4e844c391ddd461ee3071fa2d045130153",
+          "entry_hash": "41ce79fd02ae2ddcc91373807c3168be10754d2255c374c0ac7ffd8e5354e26b",
+          "salt": "695e116aff237bda3e1bca52144bd556e223e13597ed882d103a2e3da041ec9a"
+        }
+      ],
+      "leaves": [
+        "72e7026ed13403ba286b9df9de6cd61c78d737593ddb011f5af58f91a0f7cb2c",
+        "3753e81bdc89e79ffe4c9d604fc191c1f00d022362509d73ad646f019833fdac",
+        "70ca45a9bc8c1225771f40f0812fc0ee3fcee50ea30e81875f8bc56d214d50f1",
+        "105e85d17890c62dd9ea8409a0dd451122110673946ab117f3505396ba38fedf",
+        "61d79d73509d123a29351d1620908846d3c987c40fc21a7459fc6db4d657ca72"
+      ],
+      "root": "884e86de5f62348474d8675b063a588c1fbffb0b1b2c60315f67acb31167cd55",
+      "paths": [
+        [
+          {
+            "side": "L",
+            "hash": "f4f7d2d822f2ef4ccd183586b505765aec19da06d5a1844f3c9137770d31628c"
+          }
+        ],
+        [
+          {
+            "side": "L",
+            "hash": "105e85d17890c62dd9ea8409a0dd451122110673946ab117f3505396ba38fedf"
+          },
+          {
+            "side": "R",
+            "hash": "2f78ad24c9445ff9778bfd2b08cfd31b08f1228de1db9bb7cce898d3a0734378"
+          },
+          {
+            "side": "R",
+            "hash": "72e7026ed13403ba286b9df9de6cd61c78d737593ddb011f5af58f91a0f7cb2c"
+          }
+        ],
+        [
+          {
+            "side": "L",
+            "hash": "61d79d73509d123a29351d1620908846d3c987c40fc21a7459fc6db4d657ca72"
+          },
+          {
+            "side": "L",
+            "hash": "649fe390a06ba3fb15c731c54ffab24b1d808094742fc22df51acd7ec86ee6c6"
+          },
+          {
+            "side": "R",
+            "hash": "72e7026ed13403ba286b9df9de6cd61c78d737593ddb011f5af58f91a0f7cb2c"
+          }
+        ],
+        [
+          {
+            "side": "R",
+            "hash": "3753e81bdc89e79ffe4c9d604fc191c1f00d022362509d73ad646f019833fdac"
+          },
+          {
+            "side": "R",
+            "hash": "2f78ad24c9445ff9778bfd2b08cfd31b08f1228de1db9bb7cce898d3a0734378"
+          },
+          {
+            "side": "R",
+            "hash": "72e7026ed13403ba286b9df9de6cd61c78d737593ddb011f5af58f91a0f7cb2c"
+          }
+        ],
+        [
+          {
+            "side": "R",
+            "hash": "70ca45a9bc8c1225771f40f0812fc0ee3fcee50ea30e81875f8bc56d214d50f1"
+          },
+          {
+            "side": "L",
+            "hash": "649fe390a06ba3fb15c731c54ffab24b1d808094742fc22df51acd7ec86ee6c6"
+          },
+          {
+            "side": "R",
+            "hash": "72e7026ed13403ba286b9df9de6cd61c78d737593ddb011f5af58f91a0f7cb2c"
+          }
+        ]
+      ]
+    }
+  ],
+  "days": [
+    {
+      "day": "2026-11-23",
+      "root": "ce962f2c280663bc8eb77932c3a38ca4bb98f8e8147f0eb2fbc2b22296dd3869",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+      "text": "trace-day/v1\ndate:2026-11-23\nroot:ce962f2c280663bc8eb77932c3a38ca4bb98f8e8147f0eb2fbc2b22296dd3869\nprev:0000000000000000000000000000000000000000000000000000000000000000\n",
+      "value": "f6caf05a11686cd1b3c7fe4588540f5ebdbcc21238dad4a1ad7f14e6de18e58a"
+    },
+    {
+      "day": "2026-11-24",
+      "root": "884e86de5f62348474d8675b063a588c1fbffb0b1b2c60315f67acb31167cd55",
+      "prev": "f6caf05a11686cd1b3c7fe4588540f5ebdbcc21238dad4a1ad7f14e6de18e58a",
+      "text": "trace-day/v1\ndate:2026-11-24\nroot:884e86de5f62348474d8675b063a588c1fbffb0b1b2c60315f67acb31167cd55\nprev:f6caf05a11686cd1b3c7fe4588540f5ebdbcc21238dad4a1ad7f14e6de18e58a\n",
+      "value": "a84a1aee648e2918109ff660d02f6c3103baac0e4fe2c4b14ccb4c249c6a708a"
+    },
+    {
+      "day": "2026-11-25",
+      "root": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prev": "a84a1aee648e2918109ff660d02f6c3103baac0e4fe2c4b14ccb4c249c6a708a",
+      "text": "trace-day/v1\ndate:2026-11-25\nroot:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\nprev:a84a1aee648e2918109ff660d02f6c3103baac0e4fe2c4b14ccb4c249c6a708a\n",
+      "value": "a8a4b66db2ee07680881bc7b6045ed7ab2f98aab238377767e8a4563568e7e0a"
+    }
+  ]
+}
