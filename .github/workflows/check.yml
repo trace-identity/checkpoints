@@ -1,0 +1,30 @@
+# 게시 파일 감시. 비밀값을 쓰지 않는다(공개 저장소를 읽기만 한다).
+# 실패하면 GitHub 이 저장소 주인에게 메일을 보낸다(Settings → Notifications → Actions 가 켜져 있어야 한다).
+# 주의: 공개 저장소의 예약 워크플로는 저장소에 60일간 활동이 없으면 GitHub 이 자동으로 끈다.
+#       게시가 60일 넘게 멈추면 이 감시도 함께 멈추므로, 다시 시작할 때 Actions 탭에서 켜야 한다.
+name: check
+
+on:
+  schedule:
+    - cron: "30 19 * * *" # 매일 19:30 UTC = 한국 시간 04:30 (게시는 한국 시간 02시대)
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # 외부 액션을 쓰지 않고 공개 저장소를 그대로 내려받는다
+      - name: 저장소 내려받기
+        run: git clone --depth 1 --branch main "https://github.com/${{ github.repository }}.git" repo
+      - name: 계산식 기준값 확인
+        run: node verify.mjs --self-test
+        working-directory: repo
+      - name: 게시 파일 확인
+        run: node check.mjs
+        working-directory: repo
